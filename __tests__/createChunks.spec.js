@@ -15,6 +15,15 @@ describe("Create chunks function", () => {
         const output = ["a", "b", "c"];
 
         expect(createChunks(input, 1)).toEqual(output);
-        expect(createChunks(input, 1).length).toEqual(3);
+        expect(createChunks(input, 1).length).toEqual(input.length);
+    });
+
+    test("it should create an array with (x) elements of given input length minus duplicates and chunk length (1)", () => {
+        const input = "hello";
+
+        const output = ["h", "e", "l", "o"];
+
+        expect(createChunks(input, 1)).toEqual(output);
+        expect(createChunks(input, 1).length).toEqual(4);
     });
 });

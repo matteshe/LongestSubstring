@@ -6,7 +6,11 @@ export function createChunks(inputStr, length) {
     }
         
     for (let i = 0; i <= inputStr.length - length; i++) {
-        chunks.push(inputStr.substring(i, i+length));
+        let chunk = inputStr.substring(i, i+length);
+        if (! chunks.includes(chunk)) {
+            chunks.push(chunk);
+        }
+        
     }
     
     return chunks;
