@@ -44,4 +44,31 @@ describe("find longest substrings function", () => {
 
         expect(findLongestSubstring(string1, string2)).toEqual(output);
     });
+
+    test("it should return (1) longest substring (CHECKIT)", () => {
+        const string1 = "CHECKITWHEREISTHELONGESTSUBSTRING24";
+        const string2 = "SUBSTINGWHERECHECKITANTCHECK24ISCHECKWHERE";
+
+        const output = [ "CHECKIT" ];
+
+        expect(findLongestSubstring(string1, string2)).toEqual(output);
+    });
+
+    test("it should return (2) longest substrings", () => {
+        const string1 = "247WECODEONLINEONENTWICKLERHELDDECHECKITOUT";
+        const string2 = "CHECKITOUTWECODEONLINEON24ENTWICKLERHELDOUT";
+
+        const output = [ "WECODEONLINEON", "ENTWICKLERHELD" ];
+
+        expect(findLongestSubstring(string1, string2)).toEqual(output);
+    });
+
+    test("it should return (1) longest substring (ALSOLOVE)", () => {
+        const string1 = "DONUTSAREDELICIOUSBUTIALSOLOVECHECK24PIZZA";
+        const string2 = "PIZZASAREYUMMYBUTIDOALSOLOVEDONUTSFROMCHECK24";
+
+        const output = [ "ALSOLOVE" ];
+
+        expect(findLongestSubstring(string1, string2)).toEqual(output);
+    });
 });
