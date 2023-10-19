@@ -26,4 +26,14 @@ describe("Create chunks function", () => {
         expect(createChunks(input, 1)).toEqual(output);
         expect(createChunks(input, 1).length).toEqual(4);
     });
+
+    test("it should create an array with (x) elements of given input with chunk length (3)", () => {
+        const input = "hello";
+
+        const output = ["hel", "ell", "llo"];
+
+        let chunks = createChunks(input, 3);
+        expect(chunks).toEqual(output);
+        expect(chunks.length).toEqual(3);
+    });
 });
