@@ -12,7 +12,6 @@ export function findLongestSubstring(string1, string2) {
         let max = string1.length >= string2.length ? string1.length : string2.length;
         let min = 0;
         let middle = (max / 2) >>0;
-        console.log("test: " + max);
         while (max !== middle && min !== middle) {
             let string1Chunks = createChunks(string1, middle);
             let string2Chunks = createChunks(string2, middle);
