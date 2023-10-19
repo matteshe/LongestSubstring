@@ -17,7 +17,7 @@ describe("find longest substrings function", () => {
         const output = [];
 
         expect(findLongestSubstring(string1, string2)).toEqual(output);
-    })
+    });
 
     test("it should return an array with (1) element if both input are identical", () => {
         const input = "abc";
@@ -25,7 +25,7 @@ describe("find longest substrings function", () => {
         const output = [ "abc" ];
 
         expect(findLongestSubstring(input, input)).toEqual(output);
-    })
+    });
 
     test("it should return an empty array if both input contain no substrings", () => {
         const string1 = "abc";
@@ -34,5 +34,14 @@ describe("find longest substrings function", () => {
         const output = [];
 
         expect(findLongestSubstring(string1, string2)).toEqual(output);
-    })
+    });
+
+    test("it should return an array with x elements of the longest substrings", () => {
+        const string1 = "An ape eat banana";
+        const string2 = "I eat food";
+
+        const output = [ " eat " ];
+
+        expect(findLongestSubstring(string1, string2)).toEqual(output);
+    });
 });
