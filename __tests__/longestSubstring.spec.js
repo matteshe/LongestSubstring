@@ -26,4 +26,13 @@ describe("find longest substrings function", () => {
 
         expect(findLongestSubstring(input, input)).toEqual(output);
     })
+
+    test("it should return an empty array if both input contain no substrings", () => {
+        const string1 = "abc";
+        const string2 = "def";
+
+        const output = [];
+
+        expect(findLongestSubstring(string1, string2)).toEqual(output);
+    })
 });
