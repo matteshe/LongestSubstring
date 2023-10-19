@@ -1,15 +1,14 @@
 import { createChunks } from "../src/createChunks";
 
 export function findLongestSubstring(string1, string2) {
-    let substrings = [];
-
     if (!string1 || !string2) {
-        return substrings;
+        return "";
     }
-
+    
     if (string1 === string2) {
-        substrings.push(string1);
+        return string1;
     } else {
+        let substrings = [];
         let max = string1.length >= string2.length ? string1.length : string2.length;
         let min = 0;
         let middle = (max / 2) >>0;
@@ -32,7 +31,6 @@ export function findLongestSubstring(string1, string2) {
                 middle = middle - distance;
             }
         }
+        return substrings.join(" ");
     }
-
-    return substrings;
 }
