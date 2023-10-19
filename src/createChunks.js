@@ -1,5 +1,3 @@
-function createChunks(inputStr, length) {
+export function createChunks(inputStr, length) {
     return [];
 }
-
-module.exports = createChunks;
